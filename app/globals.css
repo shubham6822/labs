@@ -8,13 +8,11 @@ body {
 
 :root {
   --background: 0 0% 100%;
-  /* Light mode background */
   --foreground: 222.2 84% 4.9%;
 }
 
 .dark {
   --background: 222.2 84% 4.9%;
-  /* Dark mode background */
   --foreground: 210 40% 98%;
 }
 
