@@ -20,11 +20,11 @@ export default function HeroSection() {
         </div>
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
         <div className="text-4xl sm:text-7xl font-semibold relative z-20  bg-clip-text  bg-gradient-to-b from-neutral-200 to-neutral-500 py-8  ">
-          Your On-Demand Startup Team,
+          Affordable MVPs Built to Scale with
           <br />
-          Ready to
+          Your Vision
           <Cover className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-            Build at speed
+            Faster
           </Cover>
         </div>
         <div>
