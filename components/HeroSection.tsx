@@ -29,10 +29,9 @@ export default function HeroSection() {
         </div>
         <div>
           <span className="sm:text-2xl  text-gray-300">
-            Have an idea? We&apos;ll handle the nerdy stuff while you take
-            credit at parties
+            Turning your SaaS, Marketplace, Website, or App idea into reality is tough. We make
             <br className="sm:flex sm:flex-row hidden" />
-            <span>for being a tech genius.</span>
+            <span> it faster,affordable, and stress-free for busy founders.</span>
           </span>
         </div>
         <div className=" w-full max-w-[250px] mx-auto flex flex-col sm:flex-row justify-center items-stretch space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-6 mt-7">
