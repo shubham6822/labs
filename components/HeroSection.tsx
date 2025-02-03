@@ -2,16 +2,14 @@ import React from "react";
 import { Cover } from "./ui/cover";
 import { Spotlight } from "./ui/Spotlight";
 import Header from "./Header";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <div>
-      <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] font-[family-name:var(--font-manrope)] text-center ">
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-0"
-          fill="white"
-        />
-        <Header />
+    <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] text-center ">
+      <Spotlight className="-top-40 left-0 md:left-60 md:-top-0" fill="white" />
+      <Header />
+      <div className="flex flex-col justify-center items-center h-[80vh]">
         <div className="relative z-10 flex justify-center items-center ">
           <div className=" text-white py-1.5 sm:py-2 md:py-3 px-3 sm:px-4 md:px-6 rounded-full inline-flex items-center space-x-2 text-[13px] sm:text-sm md:text-base border border-gray-700 bg-gradient-to-r from-blue-500/20 to-purple-500/20 z-10 ">
             <span className="font-medium text-blue-400 z-10">
@@ -56,66 +54,29 @@ export default function HeroSection() {
               <rect width="18" height="18" x="3" y="4" rx="2"></rect>
               <path d="M3 10h18"></path>
             </svg>
-            <span>Book a Call</span>
+            <span>Book a call</span>
           </button>
         </div>
-        <div className="fixed bottom-6 w-full flex justify-center z-50">
-          <div
-            className="border-2 border-black rounded-full bg-white text-black py-2 px-3 sm:px-6 shadow-lg mx-auto w-auto sm:w-auto"
-            style={{ opacity: 1, transform: "none" }}
-          >
-            <div className="flex items-center justify-center gap-4 sm:gap-4">
-              <nav className="flex items-center gap-6 sm:gap-4">
-                <div className="hidden sm:flex items-center gap-4">
-                  <a
-                    className="text-sm text-gray-600 hover:text-black hover:underline transition-colors whitespace-nowrap"
-                    href="#how-it-works"
-                  >
-                    How it works
-                  </a>
-                  <a
-                    className="text-sm text-gray-600 hover:text-black hover:underline transition-colors whitespace-nowrap"
-                    href="#pricing"
-                  >
-                    Pricing
-                  </a>
-                </div>
-                <a
-                  className="text-sm text-gray-600 hover:text-black hover:underline transition-colors whitespace-nowrap"
-                  href="#portfolio"
-                >
-                  Work
-                </a>
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hidden sm:flex text-sm text-gray-600 hover:text-black hover:underline transition-colors items-center"
-                  href="https://twitter.com/prajwaltomar_"
-                >
-                  <span className="flex items-center">
-                    <span>Connect on X</span>
-                  </span>
-                </a>
-              </nav>
-              <button className="justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 rounded-full bg-black text-white hover:bg-gray-800 text-xs px-3 py-2 flex items-center gap-1 whitespace-nowrap">
-                <span>Book a Call</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="lucide lucide-arrow-right w-3 h-3"
-                >
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </button>
-            </div>
+        <span className="sm:text-sm pt-6 opacity-70 text-gray-300">
+          No commitment. Book a free 30-minute call today.
+        </span>
+        <div className="pt-8 sm:pt-14">
+          <div className="cursor-pointer flex flex-col items-center gap-2 text-gray-400 hover:text-gray-300 transition-colors">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-arrow-right w-5 h-5 transform rotate-90"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
           </div>
         </div>
       </div>
