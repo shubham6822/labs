@@ -9,7 +9,7 @@ export default function page() {
     <div className='font-[family-name:var(--font-manrope)] bg-black'>
       <HeroSection />
       <Card />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   )
 }

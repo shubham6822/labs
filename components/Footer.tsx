@@ -33,7 +33,7 @@ export default function Footer() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden sm:flex text-sm text-gray-600 hover:text-black hover:underline transition-colors items-center"
-                            href="https://twitter.com/prajwaltomar_"
+                            href="https://twitter.com/shubham6822"
                         >
                             <span className="flex items-center">
                                 <span>Connect on X</span>
