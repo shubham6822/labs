@@ -2,7 +2,6 @@ import React from "react";
 import { Cover } from "./ui/cover";
 import { Spotlight } from "./ui/Spotlight";
 import Header from "./Header";
-import Image from "next/image";
 
 export default function HeroSection() {
   return (
