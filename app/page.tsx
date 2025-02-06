@@ -14,9 +14,9 @@ export default function page() {
         <ProcessSection />
         <ComparisonTable />
       </div>
-      <Card />
+      {/* <Card /> */}
       {/* <Price /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

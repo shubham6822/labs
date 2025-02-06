@@ -101,14 +101,14 @@ const ProcessSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-16 reveal">
+        {/* <div className="text-center mt-16 reveal">
           <Button
             size="lg"
             className="bg-white text-background hover:bg-white/90 transition-all duration-300"
           >
             Start Your Journey
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
