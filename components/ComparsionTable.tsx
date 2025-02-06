@@ -54,9 +54,9 @@ const comparisonData: ComparisonItem[] = [
 
 const ComparisonTable = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-black/60 to-black/40">
+    <section className="py-2  0 px-4 bg-gradient-to-b from-black/60 to-black/40">
       <div className="max-w-7xl mx-auto">
-        <h3 className="text-lg font-semibold text-center text-gray-400 pb-5">
+        <h3 className="text-lg font-semibold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 pb-5">
           Tech is expensive (we keep it budget-friendly)
         </h3>
         <h2 className="text-4xl font-bold text-center mb-12 text-white">
@@ -79,10 +79,10 @@ const ComparisonTable = () => {
               {comparisonData.map((item, index) => (
                 <tr
                   key={index}
-                  className="border-b border-gray-800 hover:bg-gray-900/30 transition-colors"
+                  className="border-b border-gray-800 hover:bg-gray-900/30 transition-colors "
                 >
-                  <td className="p-6 text-gray-400">
-                    <div className="flex items-start gap-4">
+                  <td className="p-6 text-gray-400 ">
+                    <div className="flex items-start gap-4 reveal ">
                       <div className="mt-1 p-1 rounded-full bg-red-500/10">
                         <X className="w-5 h-5 text-red-500" />
                       </div>
@@ -90,7 +90,7 @@ const ComparisonTable = () => {
                     </div>
                   </td>
                   <td className="p-6 text-emerald-400">
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-4 reveal">
                       <div className="mt-1 p-1 rounded-full bg-emerald-500/10">
                         <Check className="w-5 h-5 text-emerald-500" />
                       </div>
