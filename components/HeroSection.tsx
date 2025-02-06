@@ -28,9 +28,13 @@ export default function HeroSection() {
         </div>
         <div>
           <span className="sm:text-2xl  text-gray-300">
-            Turning your SaaS, Marketplace, Website, or App idea into reality is tough. We make
+            Turning your SaaS, Marketplace, Website, or App idea into reality is
+            tough. We make
             <br className="sm:flex sm:flex-row hidden" />
-            <span> it faster,affordable, and stress-free for busy founders.</span>
+            <span>
+              {" "}
+              it faster,affordable, and stress-free for busy founders.
+            </span>
           </span>
         </div>
         <div className=" w-full max-w-[250px] mx-auto flex flex-col sm:flex-row justify-center items-stretch space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-6 mt-7">
@@ -52,7 +56,7 @@ export default function HeroSection() {
               <rect width="18" height="18" x="3" y="4" rx="2"></rect>
               <path d="M3 10h18"></path>
             </svg>
-            <span>Book a call</span>
+            <span>Book a Friendly call</span>
           </button>
         </div>
         <span className="sm:text-sm pt-6 opacity-70 text-gray-300">
