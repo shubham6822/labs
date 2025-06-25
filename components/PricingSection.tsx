@@ -1,12 +1,6 @@
 import { Check, X, Home, Building, Building2 } from "lucide-react";
 
 const PricingSection = () => {
-  const fadeIn = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-  };
-
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-purple-900 via-[#1A1F2C] to-black relative overflow-hidden">
       {/* Gradient Orbs */}

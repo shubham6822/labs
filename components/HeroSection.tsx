@@ -1,9 +1,52 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { Cover } from "./ui/cover";
 import { Spotlight } from "./ui/Spotlight";
 import Header from "./Header";
 
 export default function HeroSection() {
+  useEffect(() => {
+    // Load Cal.com embed script
+    const script = document.createElement("script");
+    script.src = "https://app.cal.com/embed/embed.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector(
+        'script[src="https://app.cal.com/embed/embed.js"]'
+      );
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
+    };
+  }, []);
+
+  const handleBookCall = () => {
+    // You'll need to replace 'your-username' with your actual Cal.com username
+    // This will open the Cal.com booking modal
+    if (typeof window !== "undefined") {
+      const windowWithCal = window as typeof window & {
+        Cal?: (action: string, config?: Record<string, unknown>) => void;
+      };
+
+      if (windowWithCal.Cal) {
+        windowWithCal.Cal("init", {
+          origin: "https://app.cal.com",
+        });
+        windowWithCal.Cal("inline", {
+          elementOrSelector: "#cal-booking-place",
+          calLink: "shubham6822", // Replace with your Cal.com username
+          layout: "month_view",
+        });
+      } else {
+        // Fallback: open Cal.com in a new tab
+        window.open("https://cal.com/shubham6822", "_blank");
+      }
+    }
+  };
+
   return (
     <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] text-center ">
       <Spotlight className="-top-40 left-0 md:left-60 md:-top-0" fill="white" />
@@ -38,7 +81,10 @@ export default function HeroSection() {
           </span>
         </div>
         <div className=" w-full max-w-[250px] mx-auto flex flex-col sm:flex-row justify-center items-stretch space-y-2 sm:space-y-0 sm:space-x-4 md:space-x-6 mt-7">
-          <button className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 flex-1 bg-gradient-to-r from-blue-400 to-purple-600 text-white hover:from-blue-500 hover:to-purple-700 px-4 sm:px-6 py-3 sm:py-4 rounded-xl flex items-center justify-center space-x-2 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-[220px]">
+          <button
+            onClick={handleBookCall}
+            className="focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-zinc-950 disabled:pointer-events-none disabled:opacity-50 flex-1 bg-gradient-to-r from-blue-400 to-purple-600 text-white hover:from-blue-500 hover:to-purple-700 px-4 sm:px-6 py-3 sm:py-4 rounded-xl flex items-center justify-center space-x-2 text-sm sm:text-base font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg w-full sm:w-[220px]"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -81,6 +127,9 @@ export default function HeroSection() {
             </svg>
           </div>
         </div>
+
+        {/* Cal.com booking widget container */}
+        <div id="cal-booking-place" className="hidden"></div>
       </div>
     </div>
   );

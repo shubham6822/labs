@@ -9,7 +9,6 @@ import {
   TrendingUp,
 } from "lucide-react";
 import ProcessCard from "./ProcessCard";
-import { Button } from "@/components/ui/button";
 
 const ProcessSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
