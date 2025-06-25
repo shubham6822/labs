@@ -77,7 +77,11 @@ const ProcessSection = () => {
   ];
 
   return (
-    <section ref={sectionRef} className="py-24 px-4 md:px-6 lg:px-8 bg-black ">
+    <section
+      ref={sectionRef}
+      className="py-24 px-4 md:px-6 lg:px-8 bg-black "
+      id="process"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 reveal">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-gradient">

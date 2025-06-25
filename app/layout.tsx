@@ -3,14 +3,15 @@ import "./globals.css";
 import { Manrope } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Lab",
+  title: "Looply",
   description: "lab for mvp",
+  icons: "/loop.png",
 };
 
 const manrope = Manrope({
   variable: "--font-manrope",
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -19,11 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={` ${manrope.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={` ${manrope.variable} antialiased`}>{children}</body>
     </html>
   );
 }
